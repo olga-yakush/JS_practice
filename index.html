@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="minus-button"> 
+      -
+    </button>
+    <span class="counter">
+      0
+    </span>
+    <button class="plus-button">
+      +
+    </button>
+    <script>
+      const minusButton = document.querySelector('.minus-button')
+      const plusButton = document.querySelector('.plus-button')
+      const counter = document.querySelector('.counter')
+
+      function handleCounter(handedValue) {
+        let counterNumber = parseInt(counter.innerHTML,10)
+        counterNumber += handedValue
+        counterNumber = counterNumber < 0? 0 : counterNumber
+        counter.innerHTML = counterNumber
+      }
+      plusButton.addEventListener('click', () => {
+       handleCounter(1) 
+      })
+      minusButton.addEventListener('click', () => {
+        handleCounter(-1)
+      })
+    </script>
+</body>
+</html>
