@@ -21,10 +21,10 @@
       const plusButton = document.querySelector('.plus-button')
       const counter = document.querySelector('.counter')
 
-      function handleCounter(handedValue) {
+      function handleCounter(handedValue) { // making handleCounter a separate function
         let counterNumber = parseInt(counter.innerHTML,10)
         counterNumber += handedValue
-        counterNumber = counterNumber < 0? 0 : counterNumber
+        counterNumber = counterNumber < 0? 0 : counterNumber // span counter should not go below 0
         counter.innerHTML = counterNumber
       }
       plusButton.addEventListener('click', () => {
